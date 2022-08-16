@@ -8,7 +8,6 @@ import { Context } from '../pages/Home';
 
 function Cards() {
   const { search } = useContext(Context);
-  console.log(search);
   const [stock, setStock] = useState(1);
   const [detail, setDetail] = useState([]);
   const pokes = useSelector((state) => state.pokes.pokes.results);

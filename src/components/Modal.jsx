@@ -94,7 +94,7 @@ function Modal(props) {
             </div>
             <div className="grid grid-rows-1 grid-flow-col justify-items-end pt-16">
               <button
-                className="bg-frm-primary p-4 text-frm-white w-[100px] text-center font-bold rounded-lg col-span-6 phone:w-[80px] phone-p-2"
+                className="bg-frm-primary after:bg-frm-primary p-4 border text-frm-white w-[100px] text-center font-bold rounded-lg col-span-6 phone:w-[80px] phone:p-2"
                 type="submit"
               >
                 Simpan

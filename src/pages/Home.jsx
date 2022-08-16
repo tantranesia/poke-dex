@@ -5,7 +5,7 @@ import { createContext } from 'react';
 import Cards from '../components/Cards';
 import Navbar from '../components/Navbar';
 
-export const Context = createContext(null);
+export const Context = createContext();
 
 function Home() {
   const [search, setSearch] = useState('');

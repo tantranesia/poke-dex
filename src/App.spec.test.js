@@ -1,20 +1,22 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
+import { Context } from './pages/Home';
+// import component
+import Home from './pages/Home';
+import Cards from './components/Cards';
 
-// jest.mock('react-redux', () => {
-//     const ActualReactRedux = jest.requireActual('react-redux');
-//     return {
-//         ...ActualReactRedux,
-//         useSelector: jest.fn().mockImplementation(() => {
-//             return mockState;
-//         }),
-//     };
-// });
+it('shows correct header', () => {
+  const subject = shallow(<Home />);
+  expect(subject.find('h1').text()).toBe('Stock Pokemon');
+});
 
-const greetme = "Hello!";
-describe("Our first test!", () => {
-   it("Should say hello!", () => {
-      expect(greetme).toBe("Hello!");
-   });
+it('check card component render', () => {
+  const subject = shallow(
+    <Context.Provider value={null}>
+      <Cards />
+    </Context.Provider>
+  ).dive()
+
+  expect(subject.find('p').text()).toBe('Name');
 });
